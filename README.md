@@ -10,10 +10,10 @@
   + mô tả app
   + có thể nêu thêm cơ sỏ dữ liệu
   + thành viên nhóm
--> Dùng entity framework
--> CRUD (Create data, Read data, Update data, Delete )
--> Genetic Algorithm
--> Công thức
+- Dùng entity framework
+- CRUD (Create data, Read data, Update data, Delete )
+- Genetic Algorithm
+=> Công thức món
 - Database:
   + Món ăn, 
   + Gia vị, thực vật, động vật
