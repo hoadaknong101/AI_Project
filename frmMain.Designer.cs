@@ -45,7 +45,7 @@ namespace AI_Project
             this.btnLenThucDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLenThucDon.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLenThucDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.btnLenThucDon.Location = new System.Drawing.Point(513, 91);
+            this.btnLenThucDon.Location = new System.Drawing.Point(517, 84);
             this.btnLenThucDon.Name = "btnLenThucDon";
             this.btnLenThucDon.Size = new System.Drawing.Size(402, 69);
             this.btnLenThucDon.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace AI_Project
             this.btnNguyenLieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNguyenLieu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNguyenLieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.btnNguyenLieu.Location = new System.Drawing.Point(513, 296);
+            this.btnNguyenLieu.Location = new System.Drawing.Point(517, 289);
             this.btnNguyenLieu.Name = "btnNguyenLieu";
             this.btnNguyenLieu.Size = new System.Drawing.Size(402, 69);
             this.btnNguyenLieu.TabIndex = 3;
@@ -73,7 +73,7 @@ namespace AI_Project
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.btnThoat.Location = new System.Drawing.Point(513, 396);
+            this.btnThoat.Location = new System.Drawing.Point(517, 389);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(402, 69);
             this.btnThoat.TabIndex = 4;
@@ -99,7 +99,7 @@ namespace AI_Project
             this.btnDSMonAn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSMonAn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
             this.btnDSMonAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSMonAn.Location = new System.Drawing.Point(513, 192);
+            this.btnDSMonAn.Location = new System.Drawing.Point(517, 185);
             this.btnDSMonAn.Name = "btnDSMonAn";
             this.btnDSMonAn.Size = new System.Drawing.Size(402, 69);
             this.btnDSMonAn.TabIndex = 2;
