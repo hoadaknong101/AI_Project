@@ -46,14 +46,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmChiTietMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietMonAn.Designer.cs">
+      <DependentUpon>frmChiTietMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDanhSachMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDanhSachMonAn.Designer.cs">
+      <DependentUpon>frmDanhSachMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLenThucDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLenThucDon.Designer.cs">
+      <DependentUpon>frmLenThucDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLoad.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLoad.Designer.cs">
       <DependentUpon>frmLoad.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNguyenLieu.Designer.cs">
+      <DependentUpon>frmNguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLoad.resx">
+      <DependentUpon>frmLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

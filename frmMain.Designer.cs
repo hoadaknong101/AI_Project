@@ -1,7 +1,7 @@
 ﻿
 namespace AI_Project
 {
-    partial class frmLoad
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,16 @@ namespace AI_Project
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoad));
             this.SuspendLayout();
             // 
-            // frmLoad
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 431);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmLoad";
-            this.Text = "Load";
+            this.ClientSize = new System.Drawing.Size(1043, 555);
+            this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmMain";
             this.ResumeLayout(false);
 
         }
@@ -47,4 +46,3 @@ namespace AI_Project
         #endregion
     }
 }
-
