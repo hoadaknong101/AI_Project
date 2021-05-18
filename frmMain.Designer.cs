@@ -60,6 +60,7 @@ namespace AI_Project
             this.btnLenThucDon.TabIndex = 1;
             this.btnLenThucDon.Text = "LÊN THỰC ĐƠN ";
             this.btnLenThucDon.UseVisualStyleBackColor = true;
+            this.btnLenThucDon.Click += new System.EventHandler(this.btnLenThucDon_Click);
             // 
             // btnDSMonAn
             // 
@@ -73,6 +74,7 @@ namespace AI_Project
             this.btnDSMonAn.TabIndex = 2;
             this.btnDSMonAn.Text = "DANH SÁCH MÓN ĂN";
             this.btnDSMonAn.UseVisualStyleBackColor = true;
+            this.btnDSMonAn.Click += new System.EventHandler(this.btnDSMonAn_Click);
             // 
             // btnNguyenLieu
             // 
@@ -86,6 +88,7 @@ namespace AI_Project
             this.btnNguyenLieu.TabIndex = 3;
             this.btnNguyenLieu.Text = "NGUYÊN LIỆU";
             this.btnNguyenLieu.UseVisualStyleBackColor = true;
+            this.btnNguyenLieu.Click += new System.EventHandler(this.btnNguyenLieu_Click);
             // 
             // btnThoat
             // 
@@ -99,6 +102,7 @@ namespace AI_Project
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmMain
             // 

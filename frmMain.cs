@@ -16,5 +16,31 @@ namespace AI_Project
         {
             InitializeComponent();
         }
+
+        private void btnLenThucDon_Click(object sender, EventArgs e)
+        {
+            frmLenThucDon thucDon = new frmLenThucDon();
+            thucDon.ShowDialog();
+        }
+
+        private void btnDSMonAn_Click(object sender, EventArgs e)
+        {
+            frmDanhSachMonAn monAn = new frmDanhSachMonAn();
+            monAn.ShowDialog();
+        }
+
+        private void btnNguyenLieu_Click(object sender, EventArgs e)
+        {
+            frmNguyenLieu nguyenLieu = new frmNguyenLieu();
+            nguyenLieu.ShowDialog();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure?","Exit",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
