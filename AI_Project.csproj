@@ -84,6 +84,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmChiTietMonAn.resx">
+      <DependentUpon>frmChiTietMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDanhSachMonAn.resx">
+      <DependentUpon>frmDanhSachMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLenThucDon.resx">
+      <DependentUpon>frmLenThucDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoad.resx">
       <DependentUpon>frmLoad.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kartun-chef-png-Transparent-Images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kartun-chef-png-Transparent-Images1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

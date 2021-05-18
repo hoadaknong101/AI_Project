@@ -34,6 +34,8 @@ namespace AI_Project
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pnlLoad = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer
@@ -44,7 +46,7 @@ namespace AI_Project
             // 
             // pnlLoad
             // 
-            this.pnlLoad.BackColor = System.Drawing.Color.White;
+            this.pnlLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(165)))));
             this.pnlLoad.Location = new System.Drawing.Point(0, 283);
             this.pnlLoad.Name = "pnlLoad";
             this.pnlLoad.Size = new System.Drawing.Size(0, 24);
@@ -60,11 +62,22 @@ namespace AI_Project
             this.label1.TabIndex = 1;
             this.label1.Text = "LOADING...";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AI_Project.Properties.Resources.kartun_chef_png_Transparent_Images1;
+            this.pictureBox1.Location = new System.Drawing.Point(179, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(246, 241);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmLoad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(583, 357);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlLoad);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -73,6 +86,7 @@ namespace AI_Project
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Load";
             this.Load += new System.EventHandler(this.frmLoad_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,6 +97,7 @@ namespace AI_Project
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Panel pnlLoad;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

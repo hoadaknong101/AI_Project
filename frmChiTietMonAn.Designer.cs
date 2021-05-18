@@ -29,10 +29,17 @@ namespace AI_Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmChiTietMonAn
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmChiTietMonAn";
+            this.Name = "frmChiTietMonAn";
+            this.Text = "CHI TIẾT MÓN ĂN";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -69,5 +69,15 @@ namespace AI_Project.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kartun_chef_png_Transparent_Images1 {
+            get {
+                object obj = ResourceManager.GetObject("kartun-chef-png-Transparent-Images1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
