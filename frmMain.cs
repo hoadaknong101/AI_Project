@@ -35,12 +35,18 @@ namespace AI_Project
             nguyenLieu.ShowDialog();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void btnThoat_Click_1(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure?","Exit",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
             }
+        }
+
+        private void btnGioiThieu_Click(object sender, EventArgs e)
+        {
+            frmGioiThieu gioiThieu = new frmGioiThieu();
+            gioiThieu.ShowDialog();
         }
     }
 }
