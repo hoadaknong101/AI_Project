@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AI_Project
 {
-    public partial class Form1 : Form
+    public partial class frmLoad : Form
     {
-        public Form1()
+        public frmLoad()
         {
             InitializeComponent();
         }

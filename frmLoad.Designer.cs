@@ -1,7 +1,7 @@
 ﻿
 namespace AI_Project
 {
-    partial class Form1
+    partial class frmLoad
     {
         /// <summary>
         /// Required designer variable.
