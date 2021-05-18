@@ -41,9 +41,9 @@ namespace AI_Project
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AI_Project.Properties.Resources.kartun_chef_png_Transparent_Images;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 199);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(356, 366);
+            this.pictureBox1.Size = new System.Drawing.Size(516, 540);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -54,11 +54,11 @@ namespace AI_Project
             this.btnLenThucDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLenThucDon.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLenThucDon.ForeColor = System.Drawing.Color.White;
-            this.btnLenThucDon.Location = new System.Drawing.Point(494, 146);
+            this.btnLenThucDon.Location = new System.Drawing.Point(505, 98);
             this.btnLenThucDon.Name = "btnLenThucDon";
             this.btnLenThucDon.Size = new System.Drawing.Size(402, 69);
             this.btnLenThucDon.TabIndex = 1;
-            this.btnLenThucDon.Text = "Lên thực đơn";
+            this.btnLenThucDon.Text = "LÊN THỰC ĐƠN ";
             this.btnLenThucDon.UseVisualStyleBackColor = true;
             // 
             // btnDSMonAn
@@ -67,11 +67,11 @@ namespace AI_Project
             this.btnDSMonAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDSMonAn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSMonAn.ForeColor = System.Drawing.Color.White;
-            this.btnDSMonAn.Location = new System.Drawing.Point(494, 247);
+            this.btnDSMonAn.Location = new System.Drawing.Point(505, 199);
             this.btnDSMonAn.Name = "btnDSMonAn";
             this.btnDSMonAn.Size = new System.Drawing.Size(402, 69);
             this.btnDSMonAn.TabIndex = 2;
-            this.btnDSMonAn.Text = "Danh sách món ăn";
+            this.btnDSMonAn.Text = "DANH SÁCH MÓN ĂN";
             this.btnDSMonAn.UseVisualStyleBackColor = true;
             // 
             // btnNguyenLieu
@@ -80,11 +80,11 @@ namespace AI_Project
             this.btnNguyenLieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNguyenLieu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNguyenLieu.ForeColor = System.Drawing.Color.White;
-            this.btnNguyenLieu.Location = new System.Drawing.Point(494, 351);
+            this.btnNguyenLieu.Location = new System.Drawing.Point(505, 303);
             this.btnNguyenLieu.Name = "btnNguyenLieu";
             this.btnNguyenLieu.Size = new System.Drawing.Size(402, 69);
             this.btnNguyenLieu.TabIndex = 3;
-            this.btnNguyenLieu.Text = "Nguyên liệu";
+            this.btnNguyenLieu.Text = "NGUYÊN LIỆU";
             this.btnNguyenLieu.UseVisualStyleBackColor = true;
             // 
             // btnThoat
@@ -93,11 +93,11 @@ namespace AI_Project
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(494, 451);
+            this.btnThoat.Location = new System.Drawing.Point(505, 403);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(402, 69);
             this.btnThoat.TabIndex = 4;
-            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // frmMain
@@ -114,7 +114,7 @@ namespace AI_Project
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMain";
+            this.Text = "ỨNG DỤNG THỰC ĐƠN";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
