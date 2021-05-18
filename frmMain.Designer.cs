@@ -30,24 +30,14 @@ namespace AI_Project
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLenThucDon = new System.Windows.Forms.Button();
-            this.btnDSMonAn = new System.Windows.Forms.Button();
             this.btnNguyenLieu = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDSMonAn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AI_Project.Properties.Resources.kartun_chef_png_Transparent_Images;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(516, 540);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // btnLenThucDon
             // 
@@ -62,20 +52,6 @@ namespace AI_Project
             this.btnLenThucDon.Text = "LÊN THỰC ĐƠN ";
             this.btnLenThucDon.UseVisualStyleBackColor = true;
             this.btnLenThucDon.Click += new System.EventHandler(this.btnLenThucDon_Click);
-            // 
-            // btnDSMonAn
-            // 
-            this.btnDSMonAn.FlatAppearance.BorderSize = 3;
-            this.btnDSMonAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDSMonAn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDSMonAn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.btnDSMonAn.Location = new System.Drawing.Point(513, 192);
-            this.btnDSMonAn.Name = "btnDSMonAn";
-            this.btnDSMonAn.Size = new System.Drawing.Size(402, 69);
-            this.btnDSMonAn.TabIndex = 2;
-            this.btnDSMonAn.Text = "DANH SÁCH MÓN ĂN";
-            this.btnDSMonAn.UseVisualStyleBackColor = true;
-            this.btnDSMonAn.Click += new System.EventHandler(this.btnDSMonAn_Click);
             // 
             // btnNguyenLieu
             // 
@@ -109,12 +85,37 @@ namespace AI_Project
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(110)))), ((int)(((byte)(64)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
             this.label1.Location = new System.Drawing.Point(932, 554);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "NHÓM 9";
+            // 
+            // btnDSMonAn
+            // 
+            this.btnDSMonAn.FlatAppearance.BorderSize = 3;
+            this.btnDSMonAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDSMonAn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDSMonAn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
+            this.btnDSMonAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDSMonAn.Location = new System.Drawing.Point(513, 192);
+            this.btnDSMonAn.Name = "btnDSMonAn";
+            this.btnDSMonAn.Size = new System.Drawing.Size(402, 69);
+            this.btnDSMonAn.TabIndex = 2;
+            this.btnDSMonAn.Text = "DANH SÁCH MÓN ĂN";
+            this.btnDSMonAn.UseVisualStyleBackColor = true;
+            this.btnDSMonAn.Click += new System.EventHandler(this.btnDSMonAn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AI_Project.Properties.Resources.kartun_chef_png_Transparent_Images;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(516, 540);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmMain
             // 

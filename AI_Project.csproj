@@ -128,5 +128,8 @@
   <ItemGroup>
     <None Include="Resources\kartun-chef-png-Transparent-Images1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

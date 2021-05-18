@@ -46,7 +46,7 @@ namespace AI_Project
             // 
             // pnlLoad
             // 
-            this.pnlLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(165)))));
+            this.pnlLoad.BackColor = System.Drawing.Color.White;
             this.pnlLoad.Location = new System.Drawing.Point(0, 283);
             this.pnlLoad.Name = "pnlLoad";
             this.pnlLoad.Size = new System.Drawing.Size(0, 24);
@@ -56,6 +56,7 @@ namespace AI_Project
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(234, 319);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 21);
@@ -76,6 +77,7 @@ namespace AI_Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(583, 357);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
