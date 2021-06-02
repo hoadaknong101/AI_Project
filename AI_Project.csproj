@@ -143,5 +143,8 @@
   <ItemGroup>
     <None Include="Resources\database.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -45,7 +45,7 @@ namespace AI_Project
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(960, 57);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(960, 46);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // label1
@@ -54,7 +54,7 @@ namespace AI_Project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.label1.Location = new System.Drawing.Point(395, 16);
+            this.label1.Location = new System.Drawing.Point(395, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 24);
             this.label1.TabIndex = 1;
