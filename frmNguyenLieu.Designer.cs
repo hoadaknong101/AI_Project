@@ -40,7 +40,7 @@ namespace AI_Project
             this.txtTenNL = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSL = new System.Windows.Forms.TextBox();
-            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnDong = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -189,17 +189,18 @@ namespace AI_Project
             this.txtSL.Size = new System.Drawing.Size(278, 32);
             this.txtSL.TabIndex = 8;
             // 
-            // btnThoat
+            // btnDong
             // 
-            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.Crimson;
-            this.btnThoat.Location = new System.Drawing.Point(762, 534);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(100, 39);
-            this.btnThoat.TabIndex = 3;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnDong.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.ForeColor = System.Drawing.Color.Crimson;
+            this.btnDong.Location = new System.Drawing.Point(762, 534);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(100, 39);
+            this.btnDong.TabIndex = 3;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnLuu
             // 
@@ -270,7 +271,7 @@ namespace AI_Project
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnDong);
             this.Controls.Add(this.dgvNL);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -301,7 +302,7 @@ namespace AI_Project
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIDNL;
-        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnHuy;

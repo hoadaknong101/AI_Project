@@ -41,7 +41,7 @@ namespace AI_Project
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnDong = new System.Windows.Forms.Button();
             this.dgvMon = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -185,17 +185,19 @@ namespace AI_Project
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             // 
-            // btnThoat
+            // btnDong
             // 
-            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnThoat.Location = new System.Drawing.Point(737, 526);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(100, 39);
-            this.btnThoat.TabIndex = 13;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnDong.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnDong.Location = new System.Drawing.Point(737, 526);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(100, 39);
+            this.btnDong.TabIndex = 13;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseCompatibleTextRendering = true;
+            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // dgvMon
             // 
@@ -251,7 +253,7 @@ namespace AI_Project
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnDong);
             this.Controls.Add(this.dgvMon);
             this.Controls.Add(this.tableLayoutPanel2);
             this.MaximumSize = new System.Drawing.Size(923, 613);
@@ -281,7 +283,7 @@ namespace AI_Project
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.DataGridView dgvMon;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;

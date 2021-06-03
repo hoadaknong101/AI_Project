@@ -146,6 +146,7 @@ namespace AI_Project
             this.btnDong.TabIndex = 23;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // frmNhomMon
             // 
