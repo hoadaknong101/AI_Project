@@ -17,6 +17,7 @@ namespace AI_Project
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLoad());
+            //Application.Run(new frmChiTietMonAn());
         }
     }
 }

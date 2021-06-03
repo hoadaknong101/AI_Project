@@ -128,6 +128,7 @@ namespace AI_Project
             this.Name = "frmChiTietMonAn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHI TIẾT MÓN ĂN";
+            this.Load += new System.EventHandler(this.frmChiTietMonAn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
