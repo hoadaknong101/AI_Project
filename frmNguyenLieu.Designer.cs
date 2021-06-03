@@ -107,6 +107,7 @@ namespace AI_Project
             this.dgvNL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvNL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvNL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNL.Location = new System.Drawing.Point(50, 213);
             this.dgvNL.Name = "dgvNL";
@@ -192,6 +193,7 @@ namespace AI_Project
             // 
             this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.Crimson;
             this.btnThoat.Location = new System.Drawing.Point(762, 534);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(100, 39);
@@ -203,6 +205,7 @@ namespace AI_Project
             // 
             this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.Crimson;
             this.btnLuu.Location = new System.Drawing.Point(270, 534);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(100, 39);
@@ -214,6 +217,7 @@ namespace AI_Project
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.Crimson;
             this.btnThem.Location = new System.Drawing.Point(106, 534);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 39);
@@ -225,6 +229,7 @@ namespace AI_Project
             // 
             this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.Crimson;
             this.btnHuy.Location = new System.Drawing.Point(434, 534);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(100, 39);
@@ -246,6 +251,7 @@ namespace AI_Project
             // 
             this.btnNhomNL.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnNhomNL.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhomNL.ForeColor = System.Drawing.Color.Crimson;
             this.btnNhomNL.Location = new System.Drawing.Point(598, 534);
             this.btnNhomNL.Name = "btnNhomNL";
             this.btnNhomNL.Size = new System.Drawing.Size(100, 39);
@@ -258,7 +264,7 @@ namespace AI_Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(119)))), ((int)(((byte)(112)))));
             this.ClientSize = new System.Drawing.Size(984, 585);
             this.Controls.Add(this.btnNhomNL);
             this.Controls.Add(this.btnHuy);
@@ -271,6 +277,7 @@ namespace AI_Project
             this.MaximumSize = new System.Drawing.Size(1000, 624);
             this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "frmNguyenLieu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NGUYÊN LIỆU";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

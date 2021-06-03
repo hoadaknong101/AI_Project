@@ -39,6 +39,7 @@ namespace AI_Project
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "frmGioiThieu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGioiThieu";
             this.ResumeLayout(false);
 

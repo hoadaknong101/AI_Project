@@ -38,6 +38,7 @@ namespace AI_Project
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(696, 523);
             this.Name = "frmChiTietMonAn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHI TIẾT MÓN ĂN";
             this.ResumeLayout(false);
 

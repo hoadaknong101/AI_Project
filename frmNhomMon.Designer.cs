@@ -84,6 +84,7 @@ namespace AI_Project
             // 
             // dgvNhomMon
             // 
+            this.dgvNhomMon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvNhomMon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhomMon.Location = new System.Drawing.Point(12, 162);
             this.dgvNhomMon.Name = "dgvNhomMon";
@@ -163,6 +164,7 @@ namespace AI_Project
             this.Controls.Add(this.txtMaNhom);
             this.Controls.Add(this.label1);
             this.Name = "frmNhomMon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " NHÓM MÓN";
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhomMon)).EndInit();
             this.ResumeLayout(false);
