@@ -205,11 +205,13 @@ namespace AI_Project
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvMon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvMon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMon.Location = new System.Drawing.Point(41, 193);
             this.dgvMon.Name = "dgvMon";
             this.dgvMon.Size = new System.Drawing.Size(824, 324);
             this.dgvMon.TabIndex = 12;
+            this.dgvMon.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMon_CellMouseDoubleClick);
             // 
             // label3
             // 
@@ -261,6 +263,7 @@ namespace AI_Project
             this.Name = "frmDanhSachMonAn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DANH SÁCH MÓN ĂN";
+            this.Load += new System.EventHandler(this.frmDanhSachMonAn_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMon)).EndInit();
