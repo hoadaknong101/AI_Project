@@ -248,7 +248,7 @@ namespace AI_Project
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.dgvMon);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.MaximumSize = new System.Drawing.Size(1000, 613);
+            this.MaximumSize = new System.Drawing.Size(923, 613);
             this.MinimumSize = new System.Drawing.Size(923, 613);
             this.Name = "frmDanhSachMonAn";
             this.Text = "DANH SÁCH MÓN ĂN";
