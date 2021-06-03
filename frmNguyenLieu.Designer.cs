@@ -44,7 +44,7 @@ namespace AI_Project
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbNhomMon = new System.Windows.Forms.ComboBox();
             this.btnNhomNL = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -93,7 +93,7 @@ namespace AI_Project
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtIDNL, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtSL, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbbNhomMon, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 65);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -232,15 +232,15 @@ namespace AI_Project
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbbNhomMon
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(626, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(278, 29);
-            this.comboBox1.TabIndex = 9;
+            this.cbbNhomMon.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbbNhomMon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbNhomMon.FormattingEnabled = true;
+            this.cbbNhomMon.Location = new System.Drawing.Point(626, 24);
+            this.cbbNhomMon.Name = "cbbNhomMon";
+            this.cbbNhomMon.Size = new System.Drawing.Size(278, 29);
+            this.cbbNhomMon.TabIndex = 9;
             // 
             // btnNhomNL
             // 
@@ -267,6 +267,7 @@ namespace AI_Project
             this.Controls.Add(this.dgvNL);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximumSize = new System.Drawing.Size(1000, 624);
             this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "frmNguyenLieu";
             this.Text = "NGUYÊN LIỆU";
@@ -296,7 +297,7 @@ namespace AI_Project
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbNhomMon;
         private System.Windows.Forms.Button btnNhomNL;
     }
 }
