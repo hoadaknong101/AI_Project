@@ -108,9 +108,9 @@ namespace AI_Project
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNL.Location = new System.Drawing.Point(12, 213);
+            this.dgvNL.Location = new System.Drawing.Point(50, 213);
             this.dgvNL.Name = "dgvNL";
-            this.dgvNL.Size = new System.Drawing.Size(960, 311);
+            this.dgvNL.Size = new System.Drawing.Size(866, 311);
             this.dgvNL.TabIndex = 2;
             // 
             // label2
@@ -252,6 +252,7 @@ namespace AI_Project
             this.btnNhomNL.TabIndex = 7;
             this.btnNhomNL.Text = "Nhóm NL";
             this.btnNhomNL.UseVisualStyleBackColor = true;
+            this.btnNhomNL.Click += new System.EventHandler(this.btnNhomNL_Click);
             // 
             // frmNguyenLieu
             // 

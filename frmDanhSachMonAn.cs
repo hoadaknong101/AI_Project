@@ -16,5 +16,11 @@ namespace AI_Project
         {
             InitializeComponent();
         }
+
+        private void btnNhomNL_Click(object sender, EventArgs e)
+        {
+            frmNhomMon frmNhom = new frmNhomMon();
+            frmNhom.ShowDialog();
+        }
     }
 }
