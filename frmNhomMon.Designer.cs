@@ -1,7 +1,7 @@
 ﻿
 namespace AI_Project
 {
-    partial class frmChiTietMonAn
+    partial class frmNhomMon
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,14 @@ namespace AI_Project
         {
             this.SuspendLayout();
             // 
-            // frmChiTietMonAn
+            // frmNhomMon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(696, 437);
-            this.Name = "frmChiTietMonAn";
-            this.Text = "CHI TIẾT MÓN ĂN";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "frmNhomMon";
+            this.Text = "NHÓM MÓN";
             this.ResumeLayout(false);
 
         }
