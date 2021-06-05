@@ -90,6 +90,7 @@ namespace AI_Project
             this.dgvNhomMon.Name = "dgvNhomMon";
             this.dgvNhomMon.Size = new System.Drawing.Size(351, 216);
             this.dgvNhomMon.TabIndex = 4;
+            this.dgvNhomMon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhomMon_CellClick);
             // 
             // label3
             // 
@@ -113,6 +114,7 @@ namespace AI_Project
             this.btnThem.TabIndex = 20;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnLuu
             // 
@@ -124,6 +126,7 @@ namespace AI_Project
             this.btnLuu.TabIndex = 21;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -135,6 +138,7 @@ namespace AI_Project
             this.btnHuy.TabIndex = 22;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnDong
             // 
@@ -167,6 +171,7 @@ namespace AI_Project
             this.Name = "frmNhomMon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " NHÓM MÓN";
+            this.Load += new System.EventHandler(this.frmNhomMon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhomMon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

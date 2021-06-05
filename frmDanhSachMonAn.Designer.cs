@@ -79,7 +79,7 @@ namespace AI_Project
             // 
             this.txtTenMon.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtTenMon.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenMon.Location = new System.Drawing.Point(132, 149);
+            this.txtTenMon.Location = new System.Drawing.Point(132, 140);
             this.txtTenMon.Name = "txtTenMon";
             this.txtTenMon.Size = new System.Drawing.Size(315, 32);
             this.txtTenMon.TabIndex = 17;
@@ -90,7 +90,7 @@ namespace AI_Project
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.label4.Location = new System.Drawing.Point(35, 153);
+            this.label4.Location = new System.Drawing.Point(35, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 24);
             this.label4.TabIndex = 15;
@@ -121,7 +121,7 @@ namespace AI_Project
             // 
             this.txtCalo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtCalo.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCalo.Location = new System.Drawing.Point(616, 149);
+            this.txtCalo.Location = new System.Drawing.Point(616, 140);
             this.txtCalo.Name = "txtCalo";
             this.txtCalo.Size = new System.Drawing.Size(249, 32);
             this.txtCalo.TabIndex = 20;
@@ -141,7 +141,7 @@ namespace AI_Project
             this.btnNhomNL.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnNhomNL.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhomNL.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnNhomNL.Location = new System.Drawing.Point(573, 526);
+            this.btnNhomNL.Location = new System.Drawing.Point(573, 525);
             this.btnNhomNL.Name = "btnNhomNL";
             this.btnNhomNL.Size = new System.Drawing.Size(100, 39);
             this.btnNhomNL.TabIndex = 19;
@@ -154,7 +154,7 @@ namespace AI_Project
             this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnHuy.Location = new System.Drawing.Point(409, 526);
+            this.btnHuy.Location = new System.Drawing.Point(409, 525);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(100, 39);
             this.btnHuy.TabIndex = 18;
@@ -166,31 +166,33 @@ namespace AI_Project
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnThem.Location = new System.Drawing.Point(81, 526);
+            this.btnThem.Location = new System.Drawing.Point(81, 525);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 39);
             this.btnThem.TabIndex = 16;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnLuu
             // 
             this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnLuu.Location = new System.Drawing.Point(245, 526);
+            this.btnLuu.Location = new System.Drawing.Point(245, 525);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(100, 39);
             this.btnLuu.TabIndex = 14;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnDong
             // 
             this.btnDong.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnDong.Location = new System.Drawing.Point(737, 526);
+            this.btnDong.Location = new System.Drawing.Point(737, 525);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(100, 39);
             this.btnDong.TabIndex = 13;
@@ -207,7 +209,7 @@ namespace AI_Project
             this.dgvMon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvMon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvMon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMon.Location = new System.Drawing.Point(41, 193);
+            this.dgvMon.Location = new System.Drawing.Point(41, 191);
             this.dgvMon.Name = "dgvMon";
             this.dgvMon.Size = new System.Drawing.Size(824, 324);
             this.dgvMon.TabIndex = 12;
@@ -219,7 +221,7 @@ namespace AI_Project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.label3.Location = new System.Drawing.Point(500, 153);
+            this.label3.Location = new System.Drawing.Point(500, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 24);
             this.label3.TabIndex = 23;

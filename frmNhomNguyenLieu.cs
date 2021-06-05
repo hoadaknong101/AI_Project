@@ -40,6 +40,8 @@ namespace AI_Project
         {
             dgvNhomNL.Columns[2].Visible = false;
             dgvNhomNL.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvNhomNL.Columns[0].HeaderText = "Mã nhóm";
+            dgvNhomNL.Columns[1].HeaderText = "Tên nhóm";
         }
 
         private void btnThem_Click(object sender, EventArgs e)

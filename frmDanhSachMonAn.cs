@@ -37,6 +37,8 @@ namespace AI_Project
         private void frmDanhSachMonAn_Load(object sender, EventArgs e)
         {
             LoadData();
+            btnLuu.Enabled = false;
+            btnHuy.Enabled = false;
         }
         private void LoadData()
         {
@@ -63,35 +65,31 @@ namespace AI_Project
                 MessageBox.Show("Dữ liệu trống", "Cảnh báo");
                 return;
             }
-            string tmp = dgvMon.CurrentRow.Cells[0].Value.ToString().Trim();
-            if (dgvMon.Equals(null))
-            {
-                MessageBox.Show("Dữ liệu trống", "Cảnh báo");
-                return;
-            }
-            var isNumeric = !string.IsNullOrEmpty(tmp) &&
-                tmp.All(Char.IsDigit);
-            if (isNumeric)
-                ID = int.Parse(dgvMon.CurrentRow.Cells[0].Value.ToString().Trim());
-            else
-            {
-                MessageBox.Show("Dữ liệu trống", "Cảnh báo");
-                return;
-            }
+            btnLuu.Enabled = true;
+            btnHuy.Enabled = true;
             tenMon = dgvMon.CurrentRow.Cells[1].Value.ToString().Trim();
             tongNguyenLieu = int.Parse(dgvMon.CurrentRow.Cells[2].Value.ToString().Trim());
-            var isNumeric_2 = !string.IsNullOrEmpty(dgvMon.CurrentRow.Cells[4].Value.ToString().Trim()) &&
-                dgvMon.CurrentRow.Cells[4].Value.ToString().Trim().All(Char.IsDigit);
-            if (isNumeric_2)
-                nhomMon = int.Parse(dgvMon.CurrentRow.Cells[4].Value.ToString().Trim());
-            else
-            {
-                MessageBox.Show("Dữ liệu trống", "Cảnh báo");
-                return;
-            }
             calo = double.Parse(dgvMon.CurrentRow.Cells[3].Value.ToString().Trim());
             frmChiTietMonAn monAn = new frmChiTietMonAn();
             monAn.ShowDialog();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            //
+
+            //
+            LoadData();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            //
+
+            //
+            LoadData();
+            btnLuu.Enabled = false;
+            btnHuy.Enabled = false;
         }
     }
 }

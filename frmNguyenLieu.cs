@@ -44,6 +44,10 @@ namespace AI_Project
             dgvNL.Columns[5].Visible = false;
             dgvNL.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvNL.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvNL.Columns[0].HeaderText = "Mã NL";
+            dgvNL.Columns[1].HeaderText = "Tên NL";
+            dgvNL.Columns[2].HeaderText = "Mã nhóm";
+            dgvNL.Columns[3].HeaderText = "Số lượng";
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
         }
