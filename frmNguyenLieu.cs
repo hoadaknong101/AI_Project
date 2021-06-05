@@ -19,7 +19,7 @@ namespace AI_Project
 
         private void btnNhomNL_Click(object sender, EventArgs e)
         {
-            frmNguyenLieu frm = new frmNguyenLieu();
+            frmNhomNguyenLieu frm = new frmNhomNguyenLieu();
             frm.ShowDialog();
         }
 
