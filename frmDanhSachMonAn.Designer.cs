@@ -34,7 +34,7 @@ namespace AI_Project
             this.txtTenMon = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtIDMon = new System.Windows.Forms.TextBox();
+            this.txtSLNL = new System.Windows.Forms.TextBox();
             this.txtCalo = new System.Windows.Forms.TextBox();
             this.cbbNhomMon = new System.Windows.Forms.ComboBox();
             this.btnNhomNL = new System.Windows.Forms.Button();
@@ -104,18 +104,18 @@ namespace AI_Project
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
             this.label2.Location = new System.Drawing.Point(37, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 24);
+            this.label2.Size = new System.Drawing.Size(65, 24);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Mã món";
+            this.label2.Text = "SLNL";
             // 
-            // txtIDMon
+            // txtSLNL
             // 
-            this.txtIDMon.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtIDMon.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDMon.Location = new System.Drawing.Point(132, 80);
-            this.txtIDMon.Name = "txtIDMon";
-            this.txtIDMon.Size = new System.Drawing.Size(315, 32);
-            this.txtIDMon.TabIndex = 11;
+            this.txtSLNL.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtSLNL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSLNL.Location = new System.Drawing.Point(132, 80);
+            this.txtSLNL.Name = "txtSLNL";
+            this.txtSLNL.Size = new System.Drawing.Size(315, 32);
+            this.txtSLNL.TabIndex = 11;
             // 
             // txtCalo
             // 
@@ -213,6 +213,7 @@ namespace AI_Project
             this.dgvMon.Name = "dgvMon";
             this.dgvMon.Size = new System.Drawing.Size(824, 324);
             this.dgvMon.TabIndex = 12;
+            this.dgvMon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMon_CellClick);
             this.dgvMon.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMon_CellMouseDoubleClick);
             // 
             // label3
@@ -250,7 +251,7 @@ namespace AI_Project
             this.Controls.Add(this.txtTenMon);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtIDMon);
+            this.Controls.Add(this.txtSLNL);
             this.Controls.Add(this.txtCalo);
             this.Controls.Add(this.cbbNhomMon);
             this.Controls.Add(this.btnNhomNL);
@@ -281,7 +282,7 @@ namespace AI_Project
         private System.Windows.Forms.TextBox txtTenMon;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIDMon;
+        private System.Windows.Forms.TextBox txtSLNL;
         private System.Windows.Forms.TextBox txtCalo;
         private System.Windows.Forms.ComboBox cbbNhomMon;
         private System.Windows.Forms.Button btnNhomNL;

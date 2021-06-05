@@ -61,7 +61,8 @@ namespace AI_Project
             }
             txtIDNL.Text = dgvNL.CurrentRow.Cells[0].Value.ToString();
             txtTenNL.Text = dgvNL.CurrentRow.Cells[1].Value.ToString();
-            txtSL.Text = dgvNL.CurrentRow.Cells[2].Value.ToString();
+            txtSL.Text = dgvNL.CurrentRow.Cells[3].Value.ToString();
+            cbbNhomMon.Text = dgvNL.CurrentRow.Cells[2].Value.ToString();
             btnLuu.Enabled = true;
         }
 
