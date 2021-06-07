@@ -94,7 +94,12 @@ namespace AI_Project
 
         private void dgvMon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtSLNL.Text = dgvMon.CurrentRow.Cells[2].Value.ToString();
+            if(dgvMon.CurrentRow.Cells[2].Value.ToString().CompareTo(null) == 1)
+            {
+                txtSLNL.Text = "";
+            }
+            else
+                txtSLNL.Text = dgvMon.CurrentRow.Cells[2].Value.ToString();
             txtTenMon.Text = dgvMon.CurrentRow.Cells[1].Value.ToString();
             txtCalo.Text = dgvMon.CurrentRow.Cells[3].Value.ToString();
             cbbNhomMon.Text = dgvMon.CurrentRow.Cells[4].Value.ToString();
