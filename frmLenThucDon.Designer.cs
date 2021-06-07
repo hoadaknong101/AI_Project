@@ -31,6 +31,10 @@ namespace AI_Project
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtSoNgay = new System.Windows.Forms.TextBox();
+            this.txtSoBua = new System.Windows.Forms.TextBox();
+            this.txtSoCalo = new System.Windows.Forms.TextBox();
+            this.btnStart = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,20 +64,57 @@ namespace AI_Project
             this.label1.TabIndex = 1;
             this.label1.Text = "LÊN THỰC ĐƠN";
             // 
+            // txtSoNgay
+            // 
+            this.txtSoNgay.Location = new System.Drawing.Point(472, 188);
+            this.txtSoNgay.Name = "txtSoNgay";
+            this.txtSoNgay.Size = new System.Drawing.Size(100, 20);
+            this.txtSoNgay.TabIndex = 3;
+            // 
+            // txtSoBua
+            // 
+            this.txtSoBua.Location = new System.Drawing.Point(472, 246);
+            this.txtSoBua.Name = "txtSoBua";
+            this.txtSoBua.Size = new System.Drawing.Size(100, 20);
+            this.txtSoBua.TabIndex = 4;
+            // 
+            // txtSoCalo
+            // 
+            this.txtSoCalo.Location = new System.Drawing.Point(472, 298);
+            this.txtSoCalo.Name = "txtSoCalo";
+            this.txtSoCalo.Size = new System.Drawing.Size(100, 20);
+            this.txtSoCalo.TabIndex = 5;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(485, 339);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 6;
+            this.btnStart.Text = "button1";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click_1);
+            // 
             // frmLenThucDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(119)))), ((int)(((byte)(112)))));
             this.ClientSize = new System.Drawing.Size(984, 571);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.txtSoCalo);
+            this.Controls.Add(this.txtSoBua);
+            this.Controls.Add(this.txtSoNgay);
             this.Controls.Add(this.tableLayoutPanel2);
             this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "frmLenThucDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LÊN THỰC ĐƠN";
+            this.Load += new System.EventHandler(this.frmLenThucDon_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -81,5 +122,9 @@ namespace AI_Project
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSoNgay;
+        private System.Windows.Forms.TextBox txtSoBua;
+        private System.Windows.Forms.TextBox txtSoCalo;
+        private System.Windows.Forms.Button btnStart;
     }
 }

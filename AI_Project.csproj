@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AIDB.cs" />
+    <Compile Include="Bua.cs" />
     <Compile Include="frmNhomMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,9 +116,11 @@
     <Compile Include="Models\NGUYENLIEU.cs" />
     <Compile Include="Models\NHOMMON.cs" />
     <Compile Include="Models\NHOMNGUYENLIEU.cs" />
+    <Compile Include="Ngay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagram.cs" />
+    <Compile Include="ThucDon.cs" />
     <EmbeddedResource Include="frmChiTietMonAn.resx">
       <DependentUpon>frmChiTietMonAn.cs</DependentUpon>
     </EmbeddedResource>
