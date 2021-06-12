@@ -26,7 +26,7 @@ namespace AI_Project
             "động của cơ thể. Nguồn năng lượng này duy trì hơi thở, não " +
             "bộ, nhịp tim và các hoạt động khác của cơ thể.  Tất cả các " +
             "loại thức ăn hàng ngày đều chứa một lượng calo nhất định.";
-        string loiKhuyen_4 = "Chắc hẳn bạn đã từng thắc mắc tại sao có " +
+        string loiKhuyen_4 = "Chắc hẳn bạn đã từng thắc mắc tại sao có " +  
             "người gọi là Calo, có người gọi là Kcal rồi đúng không! Trên" +
             " thực thế: Calo = Kcal. Ở Anh mọi người thường dùng Kcal hơn;" +
             " ở Việt Nam, Mỹ và một số nước khác thì dùng từ Calo. Hãy " +
