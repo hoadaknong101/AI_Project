@@ -37,6 +37,7 @@ namespace AI_Project
             this.btnGioiThieu = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCongThucMon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@ namespace AI_Project
             this.btnLenThucDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLenThucDon.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLenThucDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.btnLenThucDon.Location = new System.Drawing.Point(620, 60);
+            this.btnLenThucDon.Location = new System.Drawing.Point(620, 20);
             this.btnLenThucDon.Name = "btnLenThucDon";
             this.btnLenThucDon.Size = new System.Drawing.Size(402, 69);
             this.btnLenThucDon.TabIndex = 1;
@@ -63,7 +64,7 @@ namespace AI_Project
             this.btnNguyenLieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNguyenLieu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNguyenLieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.btnNguyenLieu.Location = new System.Drawing.Point(620, 264);
+            this.btnNguyenLieu.Location = new System.Drawing.Point(620, 317);
             this.btnNguyenLieu.Name = "btnNguyenLieu";
             this.btnNguyenLieu.Size = new System.Drawing.Size(402, 69);
             this.btnNguyenLieu.TabIndex = 3;
@@ -91,7 +92,7 @@ namespace AI_Project
             this.btnDSMonAn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSMonAn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
             this.btnDSMonAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSMonAn.Location = new System.Drawing.Point(620, 162);
+            this.btnDSMonAn.Location = new System.Drawing.Point(620, 119);
             this.btnDSMonAn.Name = "btnDSMonAn";
             this.btnDSMonAn.Size = new System.Drawing.Size(402, 69);
             this.btnDSMonAn.TabIndex = 2;
@@ -106,7 +107,7 @@ namespace AI_Project
             this.btnGioiThieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGioiThieu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGioiThieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.btnGioiThieu.Location = new System.Drawing.Point(620, 366);
+            this.btnGioiThieu.Location = new System.Drawing.Point(620, 416);
             this.btnGioiThieu.Name = "btnGioiThieu";
             this.btnGioiThieu.Size = new System.Drawing.Size(402, 69);
             this.btnGioiThieu.TabIndex = 6;
@@ -121,7 +122,7 @@ namespace AI_Project
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.btnThoat.Location = new System.Drawing.Point(620, 468);
+            this.btnThoat.Location = new System.Drawing.Point(620, 515);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(402, 69);
             this.btnThoat.TabIndex = 7;
@@ -142,12 +143,29 @@ namespace AI_Project
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnCongThucMon
+            // 
+            this.btnCongThucMon.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCongThucMon.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCongThucMon.FlatAppearance.BorderSize = 3;
+            this.btnCongThucMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCongThucMon.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCongThucMon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
+            this.btnCongThucMon.Location = new System.Drawing.Point(620, 218);
+            this.btnCongThucMon.Name = "btnCongThucMon";
+            this.btnCongThucMon.Size = new System.Drawing.Size(402, 69);
+            this.btnCongThucMon.TabIndex = 8;
+            this.btnCongThucMon.Text = "CÔNG  THỨC MÓN";
+            this.btnCongThucMon.UseVisualStyleBackColor = true;
+            this.btnCongThucMon.Click += new System.EventHandler(this.btnCongThucMon_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(1084, 611);
+            this.Controls.Add(this.btnCongThucMon);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnGioiThieu);
             this.Controls.Add(this.btnNguyenLieu);
@@ -175,5 +193,6 @@ namespace AI_Project
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGioiThieu;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnCongThucMon;
     }
 }

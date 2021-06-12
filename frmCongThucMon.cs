@@ -32,6 +32,7 @@ namespace AI_Project
             dgvCongThucMon.Columns[4].Visible = false;
             dgvCongThucMon.Columns[5].Visible = false;
             dgvCongThucMon.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvCongThucMon.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
     }
 }

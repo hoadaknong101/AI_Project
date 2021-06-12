@@ -48,5 +48,11 @@ namespace AI_Project
             frmGioiThieu gioiThieu = new frmGioiThieu();
             gioiThieu.ShowDialog();
         }
+
+        private void btnCongThucMon_Click(object sender, EventArgs e)
+        {
+            frmCongThucMon frm = new frmCongThucMon();
+            frm.ShowDialog();
+        }
     }
 }
