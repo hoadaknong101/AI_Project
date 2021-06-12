@@ -45,9 +45,7 @@ namespace AI_Project
             maMon = int.Parse(dgvCongThucMon.CurrentRow.Cells[0].Value.ToString().Trim());
             tenMon = dgvCongThucMon.CurrentRow.Cells[1].Value.ToString().Trim();
             IDMON = int.Parse(dgvCongThucMon.CurrentRow.Cells[0].Value.ToString().Trim());
-            lsMaNguyenLieu = (List<int>)(from s in db.CONGTHUCMONs
-                         where s.IDNL == IDMON
-                         select new { s.IDNL});
+            lsMaNguyenLieu = db.CONGTHUCMONs.
             frmChiTietCongThuc frm = new frmChiTietCongThuc();
             frm.ShowDialog();
         }
