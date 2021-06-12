@@ -16,7 +16,7 @@ namespace AI_Project
         private int songay = 0;
         private int sobua = 0;
         private double socalo = 0;
-        private int tongsoluong = 0;
+        private double? tongsoluong = 0;
         private List<NGUYENLIEU> nguyenlieu = new List<NGUYENLIEU>();
 
         //-----------------------------------------------------//
@@ -42,7 +42,7 @@ namespace AI_Project
 
         private ThucDon besttd = new ThucDon();
 
-        private int fnbest = 0;
+        //private int fnbest = 0;
 
 
 
@@ -68,14 +68,14 @@ namespace AI_Project
 
         private void Data()
         {
-            songay = Convert.ToInt32(tbsongay.Text);
-            sobua = Convert.ToInt32(tbsobua.Text);
-            socalo = Convert.ToDouble(tbcalo.Text);
+            songay = Convert.ToInt32(txtSoNgay.Text);
+            sobua = Convert.ToInt32(txtSoBua.Text);
+            socalo = Convert.ToDouble(txtCalo.Text);
             getdata();
 
             for (int i = 0; i < nguyenlieu.Count() - 1; i++)
             {
-                tongsoluong += Convert.ToInt32(nguyenlieu[0].SoLuong.Value.ToString());
+                tongsoluong += nguyenlieu[0].SoLuong;
             }
 
         }
@@ -94,7 +94,7 @@ namespace AI_Project
 
                     for (int k = 0; k < 3; k++)
                     {
-                        calo += Convert.ToDouble(bua.Mon[k].Calo.Value.ToString());
+                        calo += Convert.ToDouble(bua.Mon[k].Calo);
                     }
 
                     if (calo >= socalo)
@@ -163,7 +163,7 @@ namespace AI_Project
             if (nl.NHOMNGUYENLIEU.TenNhom.Trim().ToUpper().CompareTo("GIA VI") != 0)
             {
                 int temp3 = nguyenlieu.IndexOf(nl);
-                int soluongnl = Convert.ToInt32(nguyenlieu[temp3].SoLuong.Value.ToString());
+                int soluongnl = Convert.ToInt32(nguyenlieu[temp3].SoLuong);
 
                 if (soluongnl >= lieuluong)
                 {
@@ -185,7 +185,7 @@ namespace AI_Project
         {
             List<CONGTHUCMON> congthuc = db.CONGTHUCMONs.ToList();
 
-            int m = Convert.ToInt32(temp.TongNguyenLieu.Value.ToString());
+            int m = Convert.ToInt32(temp.TongNguyenLieu);
 
             CONGTHUCMON[] ct = new CONGTHUCMON[m];
             int nct = 0;
@@ -200,7 +200,7 @@ namespace AI_Project
 
             for (int i = 0; i < m; i++)
             {
-                if (checksoluong(ct[i].NGUYENLIEU, Convert.ToInt32(ct[i].LieuLuong)) == false)
+                if (checksoluong(ct[i].NGUYENLIEU, ct[i].LieuLuong) == false)
                     return false;
             }
 
@@ -373,25 +373,18 @@ namespace AI_Project
             for (int i = 0; i < songay; i++)
             {
                 Ngay ngay1 = new Ngay();
-
                 for (int a = 0; a < sobua; a++)
                 {
                     Bua bua1 = td.Ngay[i].Bua[a];
-
                     for (int b = 0; b < 3; b++)
                     {
                         MON mon1 = bua1.Mon[b];
-
                         int tile = ran.Next(0, 101);
-
                         if (tile < tyledotbiet)
                         {
                             List<CONGTHUCMON> congthuc = db.CONGTHUCMONs.ToList();
-
                             int m = Convert.ToInt32(mon1.TongNguyenLieu.Value.ToString());
-
                             CONGTHUCMON[] ct = new CONGTHUCMON[m];
-
                             for (int j = 0; j < m; j++)
                             {
                                 NGUYENLIEU nl = ct[j].NGUYENLIEU;
@@ -400,29 +393,27 @@ namespace AI_Project
                                 {
                                     int temp3 = nguyenlieu.IndexOf(nl);
                                     int soluongnl = Convert.ToInt32(nguyenlieu[temp3].SoLuong.Value.ToString());
-
                                     soluongnl += lieuluong;
-
                                     nguyenlieu[temp3].SoLuong = soluongnl;
                                 }
                             }
-
                             mon1 = createmon();
                             bua1.Mon[b] = mon1;
                         }
-
                     }
-
                     ngay1.Bua.Add(bua1);
-
                 }
                 temp.Ngay.Add(ngay1);
-
             }
             return temp;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnRun_Click(object sender, EventArgs e)
         {
             FindThucDon();
 
