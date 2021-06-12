@@ -14,10 +14,11 @@ namespace AI_Project
     {
         private AIDB db = new AIDB();
         public int ID { get; set; }
-        public string tenMon { get; set; }
-        public int tongNguyenLieu { get; set; }
-        public double calo { get; set; }
-        public int nhomMon { get; set; }
+        public static string tenMon;
+        public static int tongNguyenLieu;
+        public static double calo;
+        public static int ManhomMon;
+        public static string nhomMon;
         public frmDanhSachMonAn()
         {
             InitializeComponent();
@@ -68,8 +69,10 @@ namespace AI_Project
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
             tenMon = dgvMon.CurrentRow.Cells[1].Value.ToString().Trim();
-            tongNguyenLieu = int.Parse(dgvMon.CurrentRow.Cells[2].Value.ToString().Trim());
+            //tongNguyenLieu = int.Parse(dgvMon.CurrentRow.Cells[2].Value.ToString().Trim());
             calo = double.Parse(dgvMon.CurrentRow.Cells[3].Value.ToString().Trim());
+            ManhomMon = int.Parse(dgvMon.CurrentRow.Cells[4].Value.ToString());
+            nhomMon = db.NHOMMONs.Find(ManhomMon).TenNhom.ToString().ToLower();
             frmChiTietMonAn monAn = new frmChiTietMonAn();
             monAn.ShowDialog();
         }
@@ -94,12 +97,8 @@ namespace AI_Project
 
         private void dgvMon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dgvMon.CurrentRow.Cells[2].Value.ToString().CompareTo(null) == 1)
-            {
-                txtSLNL.Text = "";
-            }
-            else
-                txtSLNL.Text = dgvMon.CurrentRow.Cells[2].Value.ToString();
+            
+            //txtSLNL.Text = dgvMon.CurrentRow.Cells[2].Value.ToString();
             txtTenMon.Text = dgvMon.CurrentRow.Cells[1].Value.ToString();
             txtCalo.Text = dgvMon.CurrentRow.Cells[3].Value.ToString();
             cbbNhomMon.Text = dgvMon.CurrentRow.Cells[4].Value.ToString();

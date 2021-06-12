@@ -12,7 +12,6 @@ namespace AI_Project
 {
     public partial class frmChiTietMonAn : Form
     {
-        frmDanhSachMonAn a = new frmDanhSachMonAn();
         string loiKhuyen_1 = "Hạn chế thực phẩm chứa quá nhiều chất" +
             " béo cũng là một cách để bạn duy trình ổn định cân nặng của cơ thể. " +
             "Giảm thiểu những bệnh liên quan đến tim mạch. " +
@@ -61,10 +60,20 @@ namespace AI_Project
         }
         private void PrepareData()
         {
-            lblMon.Text = "Món : " + a.tenMon;
-            lblCalo.Text = "Tổng số calo : " + a.calo;
-            lblNhomMon.Text = "Thuộc loại món : " + a.nhomMon;
+            lblMon.Text = "Món : " + frmDanhSachMonAn.tenMon;
+            lblCalo.Text = "Tổng số calo : " + frmDanhSachMonAn.calo + " kCal";
+            lblNhomMon.Text = "Thuộc loại " + frmDanhSachMonAn.nhomMon;
             txtLoiKhuyen.Text = LoiKhuyen[r.Next(0,6)];
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
