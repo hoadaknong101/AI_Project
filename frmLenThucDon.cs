@@ -200,7 +200,7 @@ namespace AI_Project
 
             for (int i = 0; i < m; i++)
             {
-                if (checksoluong(ct[i].NGUYENLIEU, Convert.ToInt32(ct[i].LieuLuong.Value.ToString())) == false)
+                if (checksoluong(ct[i].NGUYENLIEU, Convert.ToInt32(ct[i].LieuLuong)) == false)
                     return false;
             }
 
@@ -395,7 +395,7 @@ namespace AI_Project
                             for (int j = 0; j < m; j++)
                             {
                                 NGUYENLIEU nl = ct[j].NGUYENLIEU;
-                                int lieuluong = Convert.ToInt32(ct[j].LieuLuong.Value.ToString());
+                                int lieuluong = Convert.ToInt32(ct[j].LieuLuong);
                                 if (nl.NHOMNGUYENLIEU.TenNhom.Trim().ToUpper().CompareTo("GIA VI") != 0)
                                 {
                                     int temp3 = nguyenlieu.IndexOf(nl);
