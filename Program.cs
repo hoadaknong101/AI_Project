@@ -16,13 +16,13 @@ namespace AI_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmLoad());
+            Application.Run(new frmLoad());
             //Application.Run(new frmChiTietMonAn());
             //Application.Run(new frmNguyenLieu());
             //Application.Run(new frmNhomNguyenLieu());
             //Application.Run(new frmDanhSachMonAn());
             //Application.Run(new frmNhomMon());
-            Application.Run(new frmLenThucDon());
+            //Application.Run(new frmLenThucDon());
         }
     }
 }
