@@ -53,6 +53,7 @@ namespace AI_Project
             this.dgvCongThucMon.Name = "dgvCongThucMon";
             this.dgvCongThucMon.Size = new System.Drawing.Size(888, 419);
             this.dgvCongThucMon.TabIndex = 31;
+            this.dgvCongThucMon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCongThucMon_CellDoubleClick);
             // 
             // frmCongThucMon
             // 
