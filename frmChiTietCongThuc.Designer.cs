@@ -134,6 +134,7 @@ namespace AI_Project
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmChiTietCongThuc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHI TIẾT CÔNG THỨC";
             this.Load += new System.EventHandler(this.frmChiTietCongThuc_Load);
             this.ResumeLayout(false);
