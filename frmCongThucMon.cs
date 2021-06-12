@@ -18,6 +18,7 @@ namespace AI_Project
         public static List<int> lsMaNguyenLieu;
         public static int lieuLuong;
         private int IDMON;
+        public static List<int> lsLieuLuong;
         public frmCongThucMon()
         {
             InitializeComponent();
@@ -45,7 +46,12 @@ namespace AI_Project
             maMon = int.Parse(dgvCongThucMon.CurrentRow.Cells[0].Value.ToString().Trim());
             tenMon = dgvCongThucMon.CurrentRow.Cells[1].Value.ToString().Trim();
             IDMON = int.Parse(dgvCongThucMon.CurrentRow.Cells[0].Value.ToString().Trim());
-            lsMaNguyenLieu = db.CONGTHUCMONs.
+            var x = db.CONGTHUCMONs.Where(s => s.IDMon == IDMON)
+                .Select(s => s.IDNL);
+            var y = db.CONGTHUCMONs.Where(s => s.IDMon == IDMON)
+                .Select(s => s.LieuLuong);
+            lsLieuLuong = y.ToList();
+            lsMaNguyenLieu = x.ToList();
             frmChiTietCongThuc frm = new frmChiTietCongThuc();
             frm.ShowDialog();
         }

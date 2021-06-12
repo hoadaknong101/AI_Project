@@ -22,7 +22,7 @@ namespace AI_Project
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IDNL { get; set; }
 
-        public int? LieuLuong { get; set; }
+        public int LieuLuong { get; set; }
 
         public virtual MON MON { get; set; }
 
