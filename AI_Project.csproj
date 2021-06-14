@@ -81,6 +81,12 @@
     <Compile Include="frmNhomNguyenLieu.Designer.cs">
       <DependentUpon>frmNhomNguyenLieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTimNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimNguyenLieu.Designer.cs">
+      <DependentUpon>frmTimNguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\CONGTHUCMON.cs" />
     <Compile Include="frmChiTietMonAn.cs">
       <SubType>Form</SubType>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhomNguyenLieu.resx">
       <DependentUpon>frmNhomNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimNguyenLieu.resx">
+      <DependentUpon>frmTimNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
