@@ -111,17 +111,20 @@ namespace AI_Project
         private void btnThem_Click(object sender, EventArgs e)
         {
             //
+            var find = db.NHOMNGUYENLIEUx.Where(x => x.TenNhom == cbbNhomMon.Text.Trim());
+            List<NHOMNGUYENLIEU> a = find.ToList();
             var add = new NGUYENLIEU()
             {
                 ID = int.Parse(txtIDNL.Text.Trim()),
                 TenNL = txtTenNL.Text.Trim(),
-                NhomNL = int.Parse(cbbNhomMon.Text.Trim()),
+                NhomNL = a[0].ID,
                 SoLuong = Double.Parse(txtSL.Text.Trim()),
             };
             db.NGUYENLIEUx.Add(add);
             db.SaveChanges();
             //
             LoadData();
+            cbbLoc.Text = "Tất cả";
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -132,6 +135,7 @@ namespace AI_Project
             db.SaveChanges();
             //
             LoadData();
+            cbbLoc.Text = "Tất cả";
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -152,6 +156,7 @@ namespace AI_Project
             dgvNL.ClearSelection();
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
+            cbbLoc.Text = "Tất cả";
         }
 
         private void cbbLoc_TextChanged(object sender, EventArgs e)
