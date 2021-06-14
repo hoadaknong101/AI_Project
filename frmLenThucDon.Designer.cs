@@ -113,6 +113,7 @@ namespace AI_Project
             this.Name = "frmLenThucDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LÊN THỰC ĐƠN";
+            this.Load += new System.EventHandler(this.frmLenThucDon_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);

@@ -111,7 +111,7 @@ namespace AI_Project
             {
                 QTbandau.Add(taothucdon());
             }
-            nguyenlieu.Clear();
+            //nguyenlieu.Clear();
 
 
         }
@@ -186,18 +186,17 @@ namespace AI_Project
 
             int m = Convert.ToInt32(temp.TongNguyenLieu);
 
-            CONGTHUCMON[] ct = new CONGTHUCMON[m];
-            int nct = 0;
+            List<CONGTHUCMON> ct = new List<CONGTHUCMON>();
 
             for (int h = 0; h < congthuc.Count() - 1; h++)
             {
-                MON mon1 = congthuc[0].MON;
+                int mon1 = congthuc[h].IDMon;
 
-                if (mon1 == temp)
-                    ct[nct++] = congthuc[0];
+                if (mon1 == temp.ID)
+                    ct.Add(congthuc[h]);
             }
 
-            for (int i = 0; i < m; i++)
+            for (int i = 0; i < ct.Count(); i++)
             {
                 if (checksoluong(ct[i].NGUYENLIEU, ct[i].LieuLuong) == false)
                     return false;
@@ -383,14 +382,25 @@ namespace AI_Project
                         {
                             List<CONGTHUCMON> congthuc = db.CONGTHUCMONs.ToList();
                             int m = Convert.ToInt32(mon1.TongNguyenLieu.Value.ToString());
-                            CONGTHUCMON[] ct = new CONGTHUCMON[m];
-                            for (int j = 0; j < m; j++)
+                            List<CONGTHUCMON> ct = new List<CONGTHUCMON>();
+
+                            for (int h = 0; h < congthuc.Count() - 1; h++)
                             {
-                                NGUYENLIEU nl = ct[j].NGUYENLIEU;
+                                int mon = congthuc[h].IDMon;
+
+                                if (mon == mon1.ID)
+                                    ct.Add(congthuc[h]);
+                            }
+
+                            for (int j = 0; j < m; j++)
+                            { 
+                                
+                                int  nl = ct[i].IDNL;
+                                var idnl = db.NGUYENLIEUx.Find(nl);
                                 int lieuluong = Convert.ToInt32(ct[j].LieuLuong);
-                                if (nl.NHOMNGUYENLIEU.TenNhom.Trim().ToUpper().CompareTo("GIA VI") != 0)
+                                if (idnl.NhomNL != 70)
                                 {
-                                    int temp3 = nguyenlieu.IndexOf(nl);
+                                    int temp3 = nguyenlieu.IndexOf(idnl);
                                     int soluongnl = Convert.ToInt32(nguyenlieu[temp3].SoLuong.Value.ToString());
                                     soluongnl += lieuluong;
                                     nguyenlieu[temp3].SoLuong = soluongnl;
@@ -417,6 +427,11 @@ namespace AI_Project
             FindThucDon();
 
             MessageBox.Show(besttd.Ngay[0].Bua[0].Mon[0].TenMon);
+        }
+
+        private void frmLenThucDon_Load(object sender, EventArgs e)
+        {
+            getdata();
         }
     }
 }
