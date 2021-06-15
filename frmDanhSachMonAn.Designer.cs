@@ -29,6 +29,7 @@ namespace AI_Project
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDanhSachMonAn));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenMon = new System.Windows.Forms.TextBox();
@@ -261,6 +262,7 @@ namespace AI_Project
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.dgvMon);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(923, 613);
             this.MinimumSize = new System.Drawing.Size(923, 613);
             this.Name = "frmDanhSachMonAn";

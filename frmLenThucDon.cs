@@ -22,6 +22,21 @@ namespace AI_Project
         private List<CONGTHUCMON> lsCTM = new List<CONGTHUCMON>();
         private List<CONGTHUCMON> lsCanTim = new List<CONGTHUCMON>();
 
+
+        //private AIDB db = new AIDB();
+        public static int tongNguyenLieu;
+        public static double calo;
+        public static int ManhomMon;
+        public static string nhomMon;
+        public static int maMon;
+        public static string tenMon;
+        public static List<int> lsMaNguyenLieu;
+        public static int lieuLuong;
+        private int IDMON;
+        public static List<int> lsLieuLuong;
+
+        DataGridView dgv;
+
         //-----------------------------------------------------//
         List<ThucDon> QTcu = new List<ThucDon>();
 
@@ -81,7 +96,8 @@ namespace AI_Project
             {
                 lsNgay.Add(thucDonTotNhat.Ngay[i]);
             }
-            for(int i = 0;i< soNgay; i++)
+            
+            for (int i = 0;i< soNgay; i++)
             {
                 TabPage tabNgay = new TabPage();
                 TabControl tmp = new TabControl();
@@ -92,17 +108,9 @@ namespace AI_Project
                 {
                     TabPage tabBua = new TabPage();
                     tabBua.Text = "Bữa " + (j + 1);
-                    DataGridView dgv = new DataGridView();
-
+                    dgv = new DataGridView();
                     dgv.DataSource = thucDonTotNhat.Ngay[i].Bua[j].Mon;
                     dgv.Dock = DockStyle.Fill;
-                    //dgv.Columns[5].Visible = false;
-                    //dgv.Columns[6].Visible = false;
-                    //dgv.Columns[0].HeaderText = "ID";
-                    //dgv.Columns[1].HeaderText = "Tên món";
-                    //dgv.Columns[2].HeaderText = "Tổng nguyên liệu";
-                    //dgv.Columns[3].HeaderText = "Số calo";
-                    //dgv.Columns[4].HeaderText = "Mã nhóm món";
                     tabBua.Controls.Add(dgv);
                     tmp.Controls.Add(tabBua);
                 }
@@ -201,10 +209,22 @@ namespace AI_Project
                     {
                         tongCalo += t.Calo;
                     }
-                    if(tongCalo >= soCalo)
+                    if (tongCalo - soCalo > -50 && tongCalo - soCalo < 50)
                     {
-                        dem++;
+                        dem += 3;
                     }
+                    else if (tongCalo - soCalo > -100 && tongCalo - soCalo < 100)
+                    {
+                        dem += 2;
+                    }
+                    else
+                    {
+                        if (tongCalo - soCalo > -200 && tongCalo - soCalo < 200)
+                        {
+                            dem++;
+                        }
+                    }
+                        
                 }
             }
             return dem;

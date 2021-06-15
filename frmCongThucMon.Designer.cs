@@ -29,6 +29,7 @@ namespace AI_Project
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCongThucMon));
             this.label3 = new System.Windows.Forms.Label();
             this.dgvCongThucMon = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCongThucMon)).BeginInit();
@@ -63,8 +64,9 @@ namespace AI_Project
             this.ClientSize = new System.Drawing.Size(912, 512);
             this.Controls.Add(this.dgvCongThucMon);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCongThucMon";
-            this.Text = "frmCongThucMon";
+            this.Text = "CÔNG THỨC MÓN";
             this.Load += new System.EventHandler(this.frmCongThucMon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCongThucMon)).EndInit();
             this.ResumeLayout(false);

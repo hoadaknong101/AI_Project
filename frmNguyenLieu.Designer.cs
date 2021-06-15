@@ -29,6 +29,7 @@ namespace AI_Project
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNguyenLieu));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -90,7 +91,7 @@ namespace AI_Project
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.51948F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.48052F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 340F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 341F));
             this.tableLayoutPanel2.Controls.Add(this.label5, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtTenNL, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
@@ -114,7 +115,7 @@ namespace AI_Project
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.label5.Location = new System.Drawing.Point(498, 76);
+            this.label5.Location = new System.Drawing.Point(497, 76);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 24);
             this.label5.TabIndex = 7;
@@ -147,7 +148,7 @@ namespace AI_Project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(225)))));
-            this.label3.Location = new System.Drawing.Point(498, 17);
+            this.label3.Location = new System.Drawing.Point(497, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 24);
             this.label3.TabIndex = 3;
@@ -178,7 +179,7 @@ namespace AI_Project
             // 
             this.txtSL.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtSL.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSL.Location = new System.Drawing.Point(622, 72);
+            this.txtSL.Location = new System.Drawing.Point(621, 72);
             this.txtSL.Name = "txtSL";
             this.txtSL.Size = new System.Drawing.Size(278, 32);
             this.txtSL.TabIndex = 8;
@@ -188,7 +189,7 @@ namespace AI_Project
             this.cbbNhomMon.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbbNhomMon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbNhomMon.FormattingEnabled = true;
-            this.cbbNhomMon.Location = new System.Drawing.Point(622, 15);
+            this.cbbNhomMon.Location = new System.Drawing.Point(621, 15);
             this.cbbNhomMon.Name = "cbbNhomMon";
             this.cbbNhomMon.Size = new System.Drawing.Size(278, 29);
             this.cbbNhomMon.TabIndex = 9;
@@ -348,6 +349,7 @@ namespace AI_Project
             this.Controls.Add(this.dgvNL);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "frmNguyenLieu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

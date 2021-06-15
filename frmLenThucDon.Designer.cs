@@ -29,6 +29,7 @@ namespace AI_Project
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLenThucDon));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSoNgay = new System.Windows.Forms.TextBox();
@@ -162,6 +163,7 @@ namespace AI_Project
             this.Controls.Add(this.txtSoBua);
             this.Controls.Add(this.txtSoNgay);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLenThucDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LÊN THỰC ĐƠN";
