@@ -8,6 +8,10 @@ namespace AI_Project
 {
     public class Bua
     {
-        public List<MON> Mon = new List<MON>();
+        public List<MON> Mon { get; set; }
+        public Bua()
+        {
+            Mon = new List<MON>();
+        }
     }
 }

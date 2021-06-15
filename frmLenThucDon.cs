@@ -13,11 +13,14 @@ namespace AI_Project
     public partial class frmLenThucDon : Form
     {
         private AIDB db = new AIDB();
-        private int songay = 0;
-        private int sobua = 0;
-        private double socalo = 0;
-        private double? tongsoluong = 0;
-        private List<NGUYENLIEU> nguyenlieu = new List<NGUYENLIEU>();
+        private int soNgay = 0;
+        private int soBua = 0;
+        private double? soCalo = 0;
+        private double tongsoluong = 0;
+        private List<NGUYENLIEU> nguyenlieu ;
+        private List<MON> lsMon = new List<MON>();
+        private List<CONGTHUCMON> lsCTM = new List<CONGTHUCMON>();
+        private List<CONGTHUCMON> lsCanTim = new List<CONGTHUCMON>();
 
         //-----------------------------------------------------//
         List<ThucDon> QTcu = new List<ThucDon>();
@@ -27,22 +30,21 @@ namespace AI_Project
         List<ThucDon> QTbandau = new List<ThucDon>();
         private Random ran = new Random();
 
-        private int soluongcathe = 100;
+        private int soLuongCaThe = 40;
 
-        private int socap = 100;
-        private int solanlap = 400;
+        private int soCap = 40;
+        private int soLanLap = 100;
 
-        private int tylelaitao = 55;
+        private int tyLeLaiTao = 55;
 
-        private int tyledotbiet = 5;
+        private int tyLeDotBien = 5;
 
-        private int tylesongsot1 = 45;
+        private int tyLeSongSot1 = 45;
 
-        private int tylesongsot2 = 90;
+        private int tyLeSongSot2 = 90;
 
-        private ThucDon besttd = new ThucDon();
+        private ThucDon thucDonTotNhat = new ThucDon();
 
-        //private int fnbest = 0;
 
 
 
@@ -50,388 +52,323 @@ namespace AI_Project
         public frmLenThucDon()
         {
             InitializeComponent();
-
+            tabControl.Visible = false;
+        }
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+            soNgay = int.Parse(txtSoNgay.Text.Trim());
+            soBua = int.Parse(txtSoBua.Text.Trim());
+            soCalo = Double.Parse(txtCalo.Text.Trim());
+            //KhoiTaoQuanThe();
+            ThuatToan();
+            PrepareUI();
+            MessageBox.Show("Đừng bỏ bữa nhé !\nMãi iu <3","Thông báo iu thưng");
+            QTcu.Clear();
+            QTmoi.Clear();
+            QTbandau.Clear();
         }
 
-        private void getdata()
+        private void frmLenThucDon_Load(object sender, EventArgs e)
+        {
+            GetData();
+        }
+        private void PrepareUI()
+        {
+            tabControl.Visible = true;
+            List<Ngay> lsNgay = new List<Ngay>();
+            List<Bua> lsBua = new List<Bua>();
+            for(int i =0;i< soNgay; i++)
+            {
+                lsNgay.Add(thucDonTotNhat.Ngay[i]);
+            }
+            for(int i = 0;i< soNgay; i++)
+            {
+                TabPage tabNgay = new TabPage();
+                TabControl tmp = new TabControl();
+                tabNgay.Controls.Add(tmp);
+                tmp.Dock = DockStyle.Fill;
+                tabNgay.Text = "Ngày " + (i + 1);
+                for (int j = 0; j < soBua; j++)
+                {
+                    TabPage tabBua = new TabPage();
+                    tabBua.Text = "Bữa " + (j + 1);
+                    DataGridView dgv = new DataGridView();
+
+                    dgv.DataSource = thucDonTotNhat.Ngay[i].Bua[j].Mon;
+                    dgv.Dock = DockStyle.Fill;
+                    //dgv.Columns[5].Visible = false;
+                    //dgv.Columns[6].Visible = false;
+                    //dgv.Columns[0].HeaderText = "ID";
+                    //dgv.Columns[1].HeaderText = "Tên món";
+                    //dgv.Columns[2].HeaderText = "Tổng nguyên liệu";
+                    //dgv.Columns[3].HeaderText = "Số calo";
+                    //dgv.Columns[4].HeaderText = "Mã nhóm món";
+                    tabBua.Controls.Add(dgv);
+                    tmp.Controls.Add(tabBua);
+                }
+                tabControl.Controls.Add(tabNgay);
+            }
+        }
+        private void GetData()
         {
             nguyenlieu = db.NGUYENLIEUx.ToList();
-
-            foreach (var x in nguyenlieu)
+            for(int i =0;i< nguyenlieu.Count();i++)
             {
-                if (x.SoLuong == 0)
-                    nguyenlieu.Remove(x);
-            }
-
-        }
-
-
-        private void Data()
-        {
-            songay = Convert.ToInt32(txtSoNgay.Text);
-            sobua = Convert.ToInt32(txtSoBua.Text);
-            socalo = Convert.ToDouble(txtCalo.Text);
-            getdata();
-
-            for (int i = 0; i < nguyenlieu.Count() - 1; i++)
-            {
-                tongsoluong += nguyenlieu[0].SoLuong;
-            }
-
-        }
-
-        private int fitness(ThucDon td)
-        {
-            int fn = 0;
-
-            for (int i = 0; i < songay; i++)
-            {
-                for (int j = 0; j < sobua; j++)
+                if (nguyenlieu[i].SoLuong == 0)
                 {
-                    Bua bua = td.Ngay[i].Bua[j];
-
-                    double calo = 0;
-
-                    for (int k = 0; k < 3; k++)
-                    {
-                        calo += Convert.ToDouble(bua.Mon[k].Calo);
-                    }
-
-                    if (calo >= socalo)
-                        fn++;
-
+                    nguyenlieu.Remove(nguyenlieu[i]);
                 }
             }
-            return fn;
+            lsMon = db.MONs.ToList();
+            lsCTM = db.CONGTHUCMONs.ToList();
         }
-
-        private void SinhQT()
+        private void KhoiTaoQuanThe()
         {
-            for (int temp = 0; temp < soluongcathe; temp++)
+            for(int i = 0;i< soLuongCaThe; i++)
             {
-                QTbandau.Add(taothucdon());
+                QTbandau.Add(TaoThucDon());
             }
-            //nguyenlieu.Clear();
-
-
         }
-
-        private ThucDon taothucdon()
+        private ThucDon TaoThucDon()
         {
             ThucDon td = new ThucDon();
-            for (int j = 0; j < songay; j++)
+            for(int i=0;i< soNgay; i++)
             {
-                td.Ngay.Add(taongay());
+                td.Ngay.Add(TaoNgay());
             }
-
             return td;
-
         }
-
-        private Ngay taongay()
+        private Ngay TaoNgay()
         {
-            List<MON> cacmon = db.MONs.ToList();
-            Ngay ngay = new Ngay();
-
-            for (int i = 0; i < sobua; i++)
+            Ngay day = new Ngay();
+            for(int i =0;i < soBua; i++)
             {
-
-                ngay.Bua.Add(taobua());
+                day.Bua.Add(TaoBua());
             }
-
-            return ngay;
-
+            return day;
         }
-
-        private Bua taobua()
+        private Bua TaoBua()
         {
-
-            Bua bua = new Bua();
-            for (int k = 0; k < 3; k++)
+            Bua b = new Bua();
+            for (int i = 0; i < 3; i++)
             {
-                bua.Mon.Add(createmon());
-            }
-
-            return bua;
-
-        }
-
-
-        private Boolean checksoluong(NGUYENLIEU nl, int lieuluong)
-        {
-            if (nl.NHOMNGUYENLIEU.TenNhom.Trim().ToUpper().CompareTo("GIA VI") != 0)
-            {
-                int temp3 = nguyenlieu.IndexOf(nl);
-                int soluongnl = Convert.ToInt32(nguyenlieu[temp3].SoLuong);
-
-                if (soluongnl >= lieuluong)
+                MON tmp = TaoMon();
+                while(b.Mon.IndexOf(tmp) != -1)
                 {
-                    soluongnl -= lieuluong;
-
-                    nguyenlieu[temp3].SoLuong = soluongnl;
-
-                    return true;
+                    tmp = TaoMon();
                 }
-                else
-                    return false;
-
+                b.Mon.Add(tmp);
             }
-
-            return true;
+            return b;
         }
-
-        private Boolean checkmon(MON temp)
+        private MON TaoMon()
         {
-            List<CONGTHUCMON> congthuc = db.CONGTHUCMONs.ToList();
-
-            int m = Convert.ToInt32(temp.TongNguyenLieu);
-
-            List<CONGTHUCMON> ct = new List<CONGTHUCMON>();
-
-            for (int h = 0; h < congthuc.Count() - 1; h++)
+            int r = ran.Next(0,lsMon.Count());
+            while (KiemTraMon(lsMon[r]) == false)
             {
-                int mon1 = congthuc[h].IDMon;
-
-                if (mon1 == temp.ID)
-                    ct.Add(congthuc[h]);
+                r = ran.Next(0, lsMon.Count());
             }
-
-            for (int i = 0; i < ct.Count(); i++)
-            {
-                if (checksoluong(ct[i].NGUYENLIEU, ct[i].LieuLuong) == false)
-                    return false;
-            }
-
-            return true;
-
+            return lsMon[r];
         }
-
-        private MON createmon()
+        private bool KiemTraMon(MON x)
         {
-            List<MON> cacmon = db.MONs.ToList();
-
-            int t = ran.Next(0, cacmon.Count());
-
-            MON temp = cacmon[t];
-
-            while (checkmon(temp) == false)
+            List<CONGTHUCMON> tmp = db.CONGTHUCMONs.Where(a => a.IDMon == x.ID).ToList();
+            for(int i =0;i < tmp.Count(); i++)
             {
-                t = ran.Next(0, cacmon.Count());
-                temp = cacmon[t];
+                foreach(var t in nguyenlieu)
+                {
+                    if(tmp[i].IDNL == t.ID && tmp[i].IDNL != 70)
+                    {
+                        if(tmp[i].LieuLuong <= t.SoLuong)
+                        {
+                            t.SoLuong -= tmp[i].LieuLuong;
+                            return true;
+                        }
+                    }
+                }
             }
-
-            return temp;
+            return false;
         }
-
-        private void Findbest(List<ThucDon> Quanthe)
+        private int Fitness(ThucDon x)
+        {
+            int dem = 0;
+            for(int i =0;i< soNgay; i++)
+            {
+                for(int j = 0;j < soBua; j++)
+                {
+                    double? tongCalo = 0;
+                    foreach(var t in x.Ngay[i].Bua[j].Mon)
+                    {
+                        tongCalo += t.Calo;
+                    }
+                    if(tongCalo >= soCalo)
+                    {
+                        dem++;
+                    }
+                }
+            }
+            return dem;
+        }
+        private void TimThucDonTotNhat()
         {
             int max = 0;
-            for (int i = 0; i < Quanthe.Count(); i++)
+            for (int i = 0; i < QTbandau.Count(); i++)
             {
-
-                if (fitness(Quanthe[i]) > max)
+                if (Fitness(QTbandau[i]) > max)
                 {
-                    max = fitness(Quanthe[i]);
-                    besttd = Quanthe[i];
-
+                    max = Fitness(QTbandau[i]);
+                    thucDonTotNhat = QTbandau[i];
                 }
-
             }
         }
-        private void FindThucDon()
+        private void ThuatToan()
         {
-            Data();
-            SinhQT();
-            int t;
-            int k;
-
-            for (int i = 0; i < solanlap; i++)
+            KhoiTaoQuanThe();
+            int t ;
+            int k ;
+            for(int i =0;i < soLanLap; i++)
             {
-                Findbest(QTbandau);
-
+                TimThucDonTotNhat();
                 for (int j = 0; j < QTbandau.Count(); j++)
                 {
                     QTcu.Add(QTbandau[j]);
                 }
-
                 QTbandau.Clear();
-
-                for (int j = 0; j < socap; j++)
+                for(int h = 0;h < soCap; h++)
                 {
                     t = ran.Next(0, QTcu.Count());
                     k = ran.Next(0, QTcu.Count());
-
-                    if (fitness(QTcu[t]) > fitness(QTcu[k]))
+                    if (Fitness(QTcu[t]) > Fitness(QTcu[k]))
                         QTbandau.Add(QTcu[t]);
                     else
                         QTbandau.Add(QTcu[k]);
                 }
-
                 QTcu.Clear();
                 QTmoi.Clear();
-
-                Laitao();
+                LaiTao();
                 QTbandau.Clear();
                 for (int j = 0; j < QTmoi.Count(); j++)
                 {
                     QTbandau.Add(QTmoi[j]);
                 }
-
             }
-
         }
-        private void Laitao()
+        private void LaiTao()
         {
-            int t = 0;
-            int k = 0;
-            int n = QTbandau.Count();
-            for (int j = 0; j < n / 2; j++)
+            int t;
+            int k;
+            for(int i = 0;i< QTbandau.Count() / 2; i++)
             {
                 t = ran.Next(0, QTbandau.Count());
                 k = ran.Next(0, QTbandau.Count());
-
                 while (t == k && QTbandau.Count() > 1)
                 {
                     t = ran.Next(0, QTbandau.Count());
                     k = ran.Next(0, QTbandau.Count());
                 }
-
                 ThucDon ct1 = QTbandau[t];
                 ThucDon ct2 = QTbandau[k];
-
                 ThucDon ctc1 = new ThucDon();
                 ThucDon ctc2 = new ThucDon();
-
-                for (int i = 0; i < songay; i++)
+                for(int j = 0;j < soNgay; j++)
                 {
                     Ngay ngay1 = new Ngay();
                     Ngay ngay2 = new Ngay();
-                    for (int a = 0; a < sobua; a++)
+                    for(int a = 0; a <soBua; a++)
                     {
-                        Bua bua1 = ct1.Ngay[i].Bua[a];
-                        Bua bua2 = ct2.Ngay[i].Bua[a];
-
-                        for (int b = 0; b < 3; b++)
+                        Bua bua1 = ct1.Ngay[j].Bua[a];
+                        Bua bua2 = ct2.Ngay[j].Bua[a];
+                        for(int b = 0; b < 3; b++)
                         {
                             MON mon1 = bua1.Mon[b];
                             MON mon2 = bua2.Mon[b];
-
-                            int tile = ran.Next(0, 101);
-
-                            if (tile < tylelaitao)
+                            int tyLe = ran.Next(0, 100);
+                            if(tyLe < tyLeLaiTao)
                             {
                                 bua1.Mon[b] = mon2;
                                 bua2.Mon[b] = mon1;
                             }
-
                         }
-
                         ngay1.Bua.Add(bua1);
-                        ngay2.Bua.Add(bua2);
+                        ngay2.Bua.Add(bua2);                        
                     }
-
                     ctc1.Ngay.Add(ngay1);
                     ctc2.Ngay.Add(ngay2);
-
-                    ctc1 = dotbien(ctc1);
-                    ctc2 = dotbien(ctc2);
-
-                    int tilesongsot = ran.Next(0, 100);
-
-                    if (tilesongsot < tylesongsot1)
-                        QTmoi.Add(ctc1);
-                    else
-                    if (tilesongsot < tylesongsot2)
-                        QTmoi.Add(ctc2);
-                    else
-                    {
-                        int h = ran.Next(0, 2);
-                        if (h == 0)
-                            QTmoi.Add(ctc1);
-                        else
-                            QTmoi.Add(ctc2);
-                    }
-
-                    if (k > t)
-                    {
-                        QTbandau.Remove(QTbandau[k]);
-                        QTbandau.Remove(QTbandau[t]);
-                    }
-                    else
-                    {
-                        QTbandau.Remove(QTbandau[t]);
-                        QTbandau.Remove(QTbandau[k]);
-                    }
                 }
-            }
-        }
-        private ThucDon dotbien(ThucDon td)
-        {
-            ThucDon temp = new ThucDon();
-            for (int i = 0; i < songay; i++)
-            {
-                Ngay ngay1 = new Ngay();
-                for (int a = 0; a < sobua; a++)
+                ctc1 = DotBien(ctc1);
+                ctc2 = DotBien(ctc2);
+                int tyLeSongSot = ran.Next(0, 100);
+                if (tyLeSongSot < tyLeSongSot1)
                 {
-                    Bua bua1 = td.Ngay[i].Bua[a];
-                    for (int b = 0; b < 3; b++)
+                    QTmoi.Add(ctc1);
+                }
+                else
+                {
+                    if (tyLeSongSot < tyLeSongSot2)
                     {
-                        MON mon1 = bua1.Mon[b];
-                        int tile = ran.Next(0, 101);
-                        if (tile < tyledotbiet)
+                        QTmoi.Add(ctc2);
+                    }
+                    else
+                    {
+                        int o = ran.Next(0, 2);
+                        if (o == 0)
                         {
-                            List<CONGTHUCMON> congthuc = db.CONGTHUCMONs.ToList();
-                            int m = Convert.ToInt32(mon1.TongNguyenLieu.Value.ToString());
-                            List<CONGTHUCMON> ct = new List<CONGTHUCMON>();
-
-                            for (int h = 0; h < congthuc.Count() - 1; h++)
-                            {
-                                int mon = congthuc[h].IDMon;
-
-                                if (mon == mon1.ID)
-                                    ct.Add(congthuc[h]);
-                            }
-
-                            for (int j = 0; j < m; j++)
-                            { 
-                                
-                                int  nl = ct[i].IDNL;
-                                var idnl = db.NGUYENLIEUx.Find(nl);
-                                int lieuluong = Convert.ToInt32(ct[j].LieuLuong);
-                                if (idnl.NhomNL != 70)
-                                {
-                                    int temp3 = nguyenlieu.IndexOf(idnl);
-                                    int soluongnl = Convert.ToInt32(nguyenlieu[temp3].SoLuong.Value.ToString());
-                                    soluongnl += lieuluong;
-                                    nguyenlieu[temp3].SoLuong = soluongnl;
-                                }
-                            }
-                            mon1 = createmon();
-                            bua1.Mon[b] = mon1;
+                            QTmoi.Add(ctc1);
+                        }
+                        else
+                        {
+                            QTmoi.Add(ctc2);
                         }
                     }
-                    ngay1.Bua.Add(bua1);
                 }
-                temp.Ngay.Add(ngay1);
+                if (k > t)
+                {
+                    QTbandau.Remove(QTbandau[k]);
+                    QTbandau.Remove(QTbandau[t]);
+                }
+                else
+                {
+                    QTbandau.Remove(QTbandau[t]);
+                    QTbandau.Remove(QTbandau[k]);
+                }
             }
-            return temp;
         }
-
-        private void btnStart_Click(object sender, EventArgs e)
+        private ThucDon DotBien(ThucDon x)
         {
-            
+            for (int i = 0; i < soNgay;i++)
+            {
+                for(int j = 0;j< soBua; j++)
+                {
+                    for(int k = 0;k < 3; k++)
+                    {
+                        int tyLe = ran.Next(0, 100);
+                        if(tyLe < tyLeDotBien)
+                        {
+                            TraNguyenLieu(x.Ngay[i].Bua[j].Mon[k]);
+                            MON ano = TaoMon();
+                            x.Ngay[i].Bua[j].Mon[k] = ano;
+                        }
+                    }
+                }
+            }
+            return x;
         }
-
-        private void btnRun_Click(object sender, EventArgs e)
+        private void TraNguyenLieu(MON x)
         {
-            FindThucDon();
-
-            MessageBox.Show(besttd.Ngay[0].Bua[0].Mon[0].TenMon);
-        }
-
-        private void frmLenThucDon_Load(object sender, EventArgs e)
-        {
-            getdata();
+            List<CONGTHUCMON> tmp = db.CONGTHUCMONs.Where(a => a.IDMon == x.ID).ToList();
+            for (int i = 0; i < tmp.Count(); i++)
+            {
+                foreach (var t in nguyenlieu)
+                {
+                    if (tmp[i].IDNL == t.ID && tmp[i].IDNL != 70)
+                    {
+                        if (tmp[i].LieuLuong <= t.SoLuong)
+                        {
+                            t.SoLuong += tmp[i].LieuLuong;
+                        }
+                    }
+                }
+            }
         }
     }
 }
